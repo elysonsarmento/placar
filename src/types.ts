@@ -26,6 +26,9 @@ export interface MatchState {
   useTimer: boolean;
   timerMode: 'progressive' | 'regressive';
   timerDuration: number;
+  enableSound: boolean;
+  enableWhistle: boolean;
+  enableVoiceAnnouncer: boolean;
 }
 
 export interface TournamentMatch {
@@ -42,3 +45,14 @@ export const DEFAULT_TEAMS: Team[] = [
   { id: '3', name: 'Time C', color: '#10b981' }, // Green
   { id: '4', name: 'Time D', color: '#f59e0b' }, // Amber
 ];
+
+export function generateUUID(): string {
+  if (typeof crypto !== 'undefined' && typeof crypto.randomUUID === 'function') {
+    return crypto.randomUUID();
+  }
+  return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, (c) => {
+    const r = (Math.random() * 16) | 0;
+    const v = c === 'x' ? r : (r & 0x3) | 0x8;
+    return v.toString(16);
+  });
+}

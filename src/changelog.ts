@@ -1,6 +1,73 @@
-export const APP_VERSION = '1.2.5';
+export const APP_VERSION = '1.4.1-beta';
 
 export const CHANGELOG = [
+  {
+    version: '1.4.1-beta',
+    date: '28/07/2026 às 12:40',
+    features: [
+      'Reset Simplificado de Pontos: O botão "Sim, Zerar" agora zera apenas a pontuação dos times no set atual sem salvar registros desnecessários no histórico',
+      'Modal de Confirmação Limpo: Removido o botão "Apenas reiniciar" e simplificada a confirmação para 2 botões diretos (Cancelar / Sim, Zerar)'
+    ]
+  },
+  {
+    version: '1.4.0-beta',
+    date: '28/07/2026 às 12:28',
+    features: [
+      'Efeitos Sonoros Integrados (Web Audio API): Sons instantâneos de ponto (+1) e subtração (-1) sem necessidade de download ou arquivos de áudio externos',
+      'Apito de Juiz Sintetizado: Apito de árbitro realista ao fechar sets, encerrar partidas ou finalizar o cronômetro',
+      'Locutor por Voz em Português (Web Speech API): Opção de narração audível do placar e avisos em pt-BR ("Dois a Um", "Fim de Set")',
+      'Painel de Configuração de Sons: Novos seletores na aba de Regras para ativar/desativar cada efeito sonoro individualmente'
+    ]
+  },
+  {
+    version: '1.3.1-beta',
+    date: '28/07/2026 às 12:23',
+    features: [
+      'Fixação dos Botões (-) nos Cantos Externos da Tela: Garantido que os botões de diminuir ponto fiquem permanentemente nos cantos extremos externos (esquerda/direita da tela), mesmo após trocar de lado a quadra'
+    ]
+  },
+  {
+    version: '1.3.0-beta',
+    date: '28/07/2026 às 12:20',
+    features: [
+      'Menu Central Vertical (Em pé): A pílula de botões flutuantes voltou a ser exibida na vertical conforme solicitado',
+      'Correção da Troca de Lados: Resolvido o bug de dupla inversão que impedia a troca visual dos times e placares ao clicar no botão'
+    ]
+  },
+  {
+    version: '1.2.9-beta',
+    date: '26/07/2026 às 16:55',
+    features: [
+      'Posição Fixa dos Botões (-): Botões de diminuir ponto mantidos fixos em seus lados da tela, mesmo ao inverter lados da quadra',
+      'Navegação Vertical no Modal de Configurações: Sidebar de configurações mantida estritamente na vertical em todas as resoluções',
+      'Linha do Tempo Sob os Botões (-): Sequência de pontos e rodapé posicionados na camada inferior por baixo dos botões de diminuir'
+    ]
+  },
+  {
+    version: '1.2.8-beta',
+    date: '26/07/2026 às 16:52',
+    features: [
+      'Eliminação da Sobreposição da UI: Menu central flutuante padronizado como pílula horizontal (42px de altura)',
+      'Espaçamento Limpo: Linha do tempo de pontos e histórico de sets no rodapé totalmente visíveis e desobstruídos em todas as resoluções móbiles'
+    ]
+  },
+  {
+    version: '1.2.7-beta',
+    date: '26/07/2026 às 16:40',
+    features: [
+      'Análise e Ajuste Visual de Cores: Marcadores de sets no topo agora seguem estritamente as cores dos seus respectivos times',
+      'Ergonomia Móbile: Botões (-) fixados nos cantos inferiores externos para fácil alcance sem cobrir os pontos',
+      'Compatibilidade HTTP Móvel: Substituição do crypto.randomUUID para permitir testes sem restrição de HTTPS em redes locais'
+    ]
+  },
+  {
+    version: '1.2.6',
+    date: '26/07/2026',
+    features: [
+      'Otimização de Dependências: Removidos pacotes não utilizados (@google/genai, express, dotenv, tsx)',
+      'Organização do Projeto: Dependências essenciais consolidadas e estrutura do package.json limpa'
+    ]
+  },
   {
     version: '1.2.5',
     date: '18/04/2026',
